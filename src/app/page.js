@@ -5,7 +5,6 @@ export default function Home() {
   return (
     <main>
       <div>
-      {isAuthenticated ? (
          <div
          className="h-screen w-full bg-gray-900 bg-cover bg-no-repeat"
          style={{
@@ -16,9 +15,6 @@ export default function Home() {
           <h1>Bienvenue sur la page d&apos;accueil !</h1>
           <p>Vous êtes maintenant authentifié.</p>
         </div>
-      ) : (
-        <h1>Bienvenue sur la page d&apos;accueil !</h1>
-      )}
       </div>
     </main>
   )
