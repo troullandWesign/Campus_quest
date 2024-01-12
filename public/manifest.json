@@ -1,7 +1,7 @@
 {
     "name": "Campus Quest",
     "short_name": "CQ",
-    "description": "Rejoignez l aventure de Campus Quest, où mystère et technologie se rencontrent pour une chasse au trésor unique sur le campus. Utilisez votre ingéniosité et vos compétences technologiques pour résoudre des énigmes et découvrir les secrets de MyDigitalSchool !",
+    "description": "test",
     "start_url": "/",
     "theme_color": "#eeeeee",
     "background_color": "#393e46",
@@ -9,7 +9,7 @@
     "icons": [
           {
         "src": "logo.png",
-        "sizes": "550x550"
+        "sizes": "any"
       }
     ]
   }
