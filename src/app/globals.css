@@ -24,4 +24,16 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
+    
 }
+
+body .bg-theme {
+  background-color: #ca7a84;
+ 
+}
+
+.bg-cover {
+  background-repeat: no-repeat;
+}
+

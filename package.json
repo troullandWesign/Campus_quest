@@ -11,6 +11,7 @@
   "dependencies": {
     "@ducanh2912/next-pwa": "^10.2.2",
     "dexie": "^3.2.4",
+    "flowbite": "^2.2.1",
     "next": "^14.0.4",
     "next-pwa": "^5.6.0",
     "react": "^18.2.0",

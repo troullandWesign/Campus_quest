@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Navigation from './components/navigation';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,8 +12,21 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="fr">
+      <head>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+      </head>
+      <body className={`${inter.className} bg-cover`} style={{
+            backgroundImage:"url('https://wallpapers-clan.com/wp-content/uploads/2023/07/fantasy-mountains-clouds-landscape-background.jpg')",
+          }}>
+        <header>
+          <Navigation></Navigation>
+        </header>
+          <main>
+            {children}
+          </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js" defer></script>
+      </body>
     </html>
   )
 }

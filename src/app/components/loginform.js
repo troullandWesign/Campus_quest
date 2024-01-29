@@ -1,16 +1,14 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-
-
-
+import { useRouter } from 'next/navigation';
 
 const LoginForm = () => {
+
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [isAuthenticated, setAuthenticated] = useState(false);
-
+    const Router = useRouter;
 
     const handleSignIn = () => {
         const nomUtilisateurValide = 'admin';
@@ -19,7 +17,7 @@ const LoginForm = () => {
         if (username === nomUtilisateurValide && password === motDePasseValide) {
           setAuthenticated(true);
           alert('Connexion réussie!');
-          router.push('/'); // Redirigez vers la page d'accueil
+          Router.push('/');
         } else {
           alert('Nom d\'utilisateur ou mot de passe incorrect.');
         }
@@ -35,18 +33,18 @@ const LoginForm = () => {
     className="flex h-screen w-full items-center justify-center bg-gray-900 bg-cover bg-no-repeat"
     style={{
       backgroundImage:
-        'url("https://images.unsplash.com/photo-1499123785106-343e69e68db1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1748&q=80")'
+     "url('https://wallpapers-clan.com/wp-content/uploads/2023/07/fantasy-mountains-clouds-landscape-background.jpg')"
     }}
     >
-    <div className="rounded-xl bg-gray-800 bg-opacity-50 px-16 py-10 shadow-lg backdrop-blur-md max-sm:px-8">
+    <div className="rounded-xl bg-gray-800/50 bg-opacity-50 px-16 py-10 shadow-lg backdrop-blur-md max-sm:px-8">
       <div className="text-white">
         <div className="mb-8 flex flex-col items-center">
           <img
-            src="/logo.png"
+            src="/images/logo.png"
             width={50}
             alt=""
             srcSet=""
-            className="mb-3"
+            className="mb-3 h-20 w-20"
           />
           <h1 className="mb-2 text-2xl">Campus Quest</h1>
           <span className="text-gray-300">Veuillez vous connecter</span>
@@ -54,7 +52,7 @@ const LoginForm = () => {
         <form action="#">
   <div className="mb-4 text-lg">
     <input
-      className="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md"
+      className="rounded-full border-none bg-theme px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md"
       type="text"
       name="name"
       placeholder="id@email.com"
@@ -65,7 +63,7 @@ const LoginForm = () => {
   </div>
   <div className="mb-4 text-lg">
     <input
-      className="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md"
+      className="rounded-full border-none bg-theme bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none "
       type="password" // Utilisez "password" au lieu de "Password"
       name="password"
       placeholder="*********"
@@ -78,7 +76,7 @@ const LoginForm = () => {
     <button
       type="button" // Utilisez "button" pour éviter de soumettre le formulaire
       onClick={handleSignIn}
-      className="rounded-3xl bg-yellow-400 bg-opacity-50 px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-yellow-600"
+      className="rounded-3xl bg-theme bg-opacity-50 px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-yellow-600"
     >
       Login
     </button>

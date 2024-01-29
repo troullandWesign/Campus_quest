@@ -1,5 +1,8 @@
 "use client";
 import Image from 'next/image'
+import Navigation from './components/navigation';
+import 'flowbite';
+
 
 export default function Home() {
   return (
@@ -9,11 +12,11 @@ export default function Home() {
          className="h-screen w-full bg-gray-900 bg-cover bg-no-repeat"
          style={{
            backgroundImage:
-          "url('https://images.unsplash.com/photo-1499123785106-343e69e68db1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1748&q=80')"
+          "url('https://wallpapers-clan.com/wp-content/uploads/2023/07/fantasy-mountains-clouds-landscape-background.jpg')"
          }}
          >
-          <h1>Bienvenue sur la page d&apos;accueil !</h1>
-          <p>Vous êtes maintenant authentifié.</p>
+          
+          
         </div>
       </div>
     </main>
