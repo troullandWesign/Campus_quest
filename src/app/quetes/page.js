@@ -14,7 +14,7 @@ export default function Quetes() {
         <h1>Archive des quêtes</h1>
         {quests.map((quest, index) => (
           <div key={index}>
-            <a href={`/quetes/${quest.slug}`} className="flex flex-col items-center bg-dark border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700/50 dark:bg-gray-800/50 dark:hover:bg-gray-700">
+            <a href={`/quetes/${quest.slug}`} className="flex flex-col items-center bg-dark border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl dark:border-gray-700/50 dark:bg-gray-800/50 dark:hover:bg-gray-700">
               <img className="object-cover w-full rounded-t-lg h-60 md:h-auto md:rounded-none md:rounded-s-lg border-b border-gray-50" src={quest.thumbnail} alt="image quête"/>
               <div className="flex flex-col justify-between p-4 leading-normal">
                   <h5 className="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">{quest.title}</h5>

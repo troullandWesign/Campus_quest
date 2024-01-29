@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Navigation from './components/navigation';
 import 'flowbite';
+import Localisation from '@/app/components/localisation'
 
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
           "url('https://wallpapers-clan.com/wp-content/uploads/2023/07/fantasy-mountains-clouds-landscape-background.jpg')"
          }}
          >
-          
+        <Localisation></Localisation>
           
         </div>
       </div>
