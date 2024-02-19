@@ -1,16 +1,13 @@
-import Quest from '@/app/components/quest/quest'
 
-export default function Quetes() {
-  const quests = [
-    new Quest("Hisory Quest", "history-quest" , "Plongez dans l'histoire a travers différentes dates et découvrez ou se cache le QRCODE.", "QRCode", "/images/quest1.jpg", false),
-    new Quest("Lunch Quest", "lunch-quest" ,"À travers le déjeunez du midi, le dragon de la nourriture se cache parmis vous, découvre le et scannez le", "QRCode.", "/images/quest2.jpg", false),
-    new Quest("Life Quest", "life-quest","Votre vie étudiante est pleine de ressources, à vous de trouver ou se cache le point vital de celle-ci a fin de la scanner.", "QRCode", "/images/quest3.jpg", false),
-  ];
+import { sql } from "@vercel/postgres";
 
+export default async function Quetes() {
+  const { rows } = await sql`SELECT * FROM quetes;`;
+  
   return (
       <div className="p-6 flex flex-col gap-6 ">
         <h1>Archive des quêtes</h1>
-        {quests.map((quest, index) => (
+         {rows.map((quest, index) => (
           <div key={index}>
             <a href={`/quetes/${quest.slug}`} className="flex flex-col items-center bg-dark border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl dark:border-gray-700/50 dark:bg-gray-800/50 dark:hover:bg-gray-700">
               <img className="object-cover w-full rounded-t-lg h-60 md:h-auto md:rounded-none md:rounded-s-lg border-b border-gray-50" src={quest.thumbnail} alt="image quête"/>
@@ -21,7 +18,7 @@ export default function Quetes() {
               </div>
             </a>
           </div>
-        ))}
+        ))} 
     </div>
   );
 }
