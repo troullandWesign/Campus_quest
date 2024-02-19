@@ -5,8 +5,6 @@ export default function Quetes() {
     new Quest("Hisory Quest", "history-quest" , "Plongez dans l'histoire a travers différentes dates et découvrez ou se cache le QRCODE.", "QRCode", "/images/quest1.jpg", false),
     new Quest("Lunch Quest", "lunch-quest" ,"À travers le déjeunez du midi, le dragon de la nourriture se cache parmis vous, découvre le et scannez le", "QRCode.", "/images/quest2.jpg", false),
     new Quest("Life Quest", "life-quest","Votre vie étudiante est pleine de ressources, à vous de trouver ou se cache le point vital de celle-ci a fin de la scanner.", "QRCode", "/images/quest3.jpg", false),
-
-    // Ajoutez d'autres quêtes au besoin
   ];
 
   return (
@@ -19,7 +17,7 @@ export default function Quetes() {
               <div className="flex flex-col justify-between p-4 leading-normal">
                   <h5 className="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">{quest.title}</h5>
                   <p className="mb-3 font-normal text-white dark:text-gray-400">{quest.description}</p>
-                  <button type="button" className="text-white bg-theme hover:bg-blue-800 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Découvrez</button>
+                  <button type="button" className="text-white bg-theme  focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Découvrez</button>
               </div>
             </a>
           </div>
