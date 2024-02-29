@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
-const MyComponent = () => {
-  const initialPosition = { latitude: 49.199823536339636, longitude: -0.35026086652346855 };
+const MyComponent = ({ latitude, longitude }) => {
+  const initialPosition = { latitude , longitude };
  
   const [locationData, setLocationData] = useState(initialPosition);
   const [distance, setDistance] = useState(0);
@@ -55,8 +55,8 @@ const MyComponent = () => {
   return (
     <div>
       <div>
-        <p>Latitude: {locationData.latitude}</p>
-        <p>Longitude: {locationData.longitude}</p>
+        <p>Votre latitude: {locationData.latitude}</p>
+        <p>Votre longitude: {locationData.longitude}</p>
       </div>
       <p>
         Distance par rapport à la position initiale :{' '}
