@@ -53,11 +53,7 @@ const MyComponent = ({ latitude, longitude }) => {
   }, []);
 
   return (
-    <div>
-      <div>
-        <p>Votre latitude: {locationData.latitude}</p>
-        <p>Votre longitude: {locationData.longitude}</p>
-      </div>
+    <div className='description'>
       <p>
         Distance par rapport à la position initiale :{' '}
         {distance < 1

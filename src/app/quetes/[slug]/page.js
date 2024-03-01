@@ -61,6 +61,7 @@ export default function QuestDetail({ params }) {
           <p className='title'>{row.titre}</p>
           <p className='description'>{row.description}</p>
           <Localisation latitude={row.lat} longitude={row.long}></Localisation>
+          <p className='description'>Veuillez vous rendre a moins de 3m avant de scannez le QRCODE</p>
           {updateSuccess && (  
             decodedValue === row.id_qrcode ? (
               <div className='container-alert'>
